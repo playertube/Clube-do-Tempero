@@ -1,273 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clube do Tempero - Temperos de Verdade para Sua Cozinha</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .article-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c5e2e;
-            font-size: 28px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        h2 {
-            color: #3a7a3c;
-            font-size: 22px;
-            margin-top: 25px;
-            border-bottom: 2px solid #3a7a3c;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #4a8a4c;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .intro {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .highlight-box {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-left: 4px solid #2c5e2e;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .product-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .product-list li {
-            background-color: #f1f8f1;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border-left: 3px solid #3a7a3c;
-        }
-        .product-list strong {
-            color: #2c5e2e;
-        }
-        .benefits {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .benefit-item {
-            background-color: #fff3e0;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .benefit-item strong {
-            color: #e65100;
-            font-size: 16px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #2c5e2e;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            margin: 20px auto;
-            text-align: center;
-            width: fit-content;
-        }
-        .cta-button:hover {
-            background-color: #3a7a3c;
-        }
-        .price-info {
-            background-color: #fce4ec;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 15px 0;
-            text-align: center;
-            font-weight: bold;
-            color: #c2185b;
-        }
-        ul.usage-list {
-            background-color: #f0f4f0;
-            padding: 15px 25px;
-            border-radius: 5px;
-        }
-        ul.usage-list li {
-            margin: 8px 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #777;
-            font-size: 14px;
-        }
-        @media (max-width: 600px) {
-            .benefits {
-                grid-template-columns: 1fr;
-            }
-            body {
-                padding: 10px;
-            }
-            .article-container {
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Iframe Full + Banner Flutuante</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Iframe tela cheia */
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Div flutuante */
+    .floating-ad {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      animation: pulse 1.5s infinite;
+    }
+
+    .floating-ad img {
+      width: 120px; /* você pode alterar */
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    /* Animação estilo Shopee (chamativa) */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="article-container">
-        <h1>🌿 Clube do Tempero: Transforme Qualquer Prato em Segundos</h1>
-        
-        <p class="intro">
-            Sabe aquele gostinho de comida caseira que faz toda diferença? Com os temperos do 
-            <strong>Clube do Tempero</strong>, você transforma qualquer prato básico em especial em segundos! 
-            Conheça essa linha de temperos de verdade com ervas e especiarias balanceadas.
-        </p>
 
-        <h2>✨ O Que é o Clube do Tempero?</h2>
-        
-        <p>O <strong>Clube do Tempero</strong> é uma marca dedicada a oferecer temperos de qualidade que 
-        transformam o básico em especial: do macarrão rápido ao caldo bem caprichado. Mais cheiro bom 
-        na cozinha e sabor de verdade para suas refeições [web:3][web:6].</p>
+  <!-- IFRAME -->
+  <iframe id="meuIframe"></iframe>
 
-        <div class="highlight-box">
-            <strong>💡 Diferencial:</strong> Com o Cheiro Verde do Clube do Tempero, você transforma 
-            qualquer prato em segundos! Sabor de verdade com ervas frescas [web:3][web:9].
-        </div>
+  <!-- DIV FLUTUANTE -->
+  <div class="floating-ad">
+    <a href="https://seulink.com" target="_blank">
+      <img src="https://via.placeholder.com/120x120.png?text=CLIQUE" alt="Anúncio">
+    </a>
+  </div>
 
-        <h2>🛒 Principais Produtos Disponíveis</h2>
+  <script>
+    // Pega o parâmetro da URL
+    function getParametro(nome) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(nome);
+    }
 
-        <h3>Ervas e Especiarias Populares:</h3>
-        <ul class="product-list">
-            <li><strong>Cheiro Verde</strong> - Mistura fresca de salsinha e cebolinha (30g, 50g, 100g) [web:17]</li>
-            <li><strong>Lemon Pepper Defumado</strong> - 50g, um dos queridinhos da marca [web:16]</li>
-            <li><strong>Lemon Pepper (Toque Cítrico)</strong> - 30g, 50g, 100g [web:12]</li>
-            <li><strong>Tempero Tempera-Tudo</strong> - Mix versátil de ervas e especiarias (R$ 6,30) [web:7][web:12]</li>
-            <li><strong>Alho em Pó</strong> - Sabor intenso (R$ 7,30) [web:12]</li>
-            <li><strong>Páprica Defumada</strong> - R$ 8,90 [web:12]</li>
-            <li><strong>Alho Poró</strong> - R$ 6,00 [web:12]</li>
-            <li><strong>Orange Pepper</strong> - R$ 8,00 [web:17]</li>
-            <li><strong>Vinagrete</strong> - R$ 9,00 [web:17]</li>
-        </ul>
+    const url = getParametro("url");
 
-        <h3>Temperos Especiais para Pratos:</h3>
-        <ul class="product-list">
-            <li><strong>Tempero para Bife Acebolado</strong> - R$ 3,50 [web:12]</li>
-            <li><strong>Tempero para Frango</strong> - R$ 6,80 [web:12]</li>
-            <li><strong>Tempero para Feijão</strong> - R$ 6,30 [web:12]</li>
-            <li><strong>Caldo de Camarão</strong> - R$ 3,50 [web:12]</li>
-            <li><strong>Chimichurri Defumado</strong> - R$ 12,40 [web:12]</li>
-            <li><strong>Limão e Ervas Finas</strong> - R$ 3,60 [web:12]</li>
-            <li><strong>Tempero Master Chef</strong> - R$ 6,70 [web:17]</li>
-        </ul>
+    // Define a URL no iframe
+    if (url) {
+      document.getElementById("meuIframe").src = decodeURIComponent(url);
+    } else {
+      document.getElementById("meuIframe").src = "https://google.com";
+    }
+  </script>
 
-        <div class="price-info">
-            🚚 Frete grátis a partir de R$ 59,00 [web:12][web:17]
-        </div>
-
-        <h2>🌟 Benefícios do Clube do Tempero</h2>
-
-        <div class="benefits">
-            <div class="benefit-item">
-                <strong>🍃 Sabor de Verdade</strong>
-                <p>Ervas frescas e especiarias balanceadas</p>
-            </div>
-            <div class="benefit-item">
-                <strong>⚡ Praticidade</strong>
-                <p>Já pronto para usar, sem preparação</p>
-            </div>
-            <div class="benefit-item">
-                <strong>💰 Acessibilidade</strong>
-                <p>Produtos de R$ 3,50 a R$ 12,40 [web:12]</p>
-            </div>
-            <div class="benefit-item">
-                <strong>🎁 Frete Grátis</strong>
-                <p>A partir de R$ 59,00 [web:17]</p>
-            </div>
-        </div>
-
-        <h2>📖 Como Usar o Cheiro Verde (Guia Rápido)</h2>
-
-        <ul class="usage-list">
-            <li><strong>Arroz/Feijão:</strong> Polvilhe na finalização, fora do fogo [web:17]</li>
-            <li><strong>Ovos e Legumes:</strong> Salpique sobre omeletes, sopas e salteados [web:17]</li>
-            <li><strong>Molhos/Maioneses:</strong> Misture no fim para manter o frescor [web:17]</li>
-        </ul>
-
-        <div class="highlight-box">
-            <strong>⚠️ Importante:</strong> O Cheiro Verde perde cor no fogo! Use preferencialmente 
-            na finalização para manter o verde vivo [web:17].
-        </div>
-
-        <h3>Vai Bem Com:</h3>
-        <p>Arroz, feijão, ovos, legumes, carnes, peixes e molhos cremosos [web:17]</p>
-
-        <h2>🌍 Cozinhas do Mundo</h2>
-        <p>O Clube do Tempero oferece temperos para diversas cozinhas internacionais:</p>
-        <ul>
-            <li>🇧🇷 Brasileira</li>
-            <li>🇮🇹 Italiana</li>
-            <li>🇲🇽 Mexicana</li>
-            <li>🇮🇳 Indiana</li>
-            <li>🇨🇳 Asiática</li>
-            <li>🇬🇷 Mediterrânea</li>
-            <li>🇪🇸 Espanhola</li>
-            <li>🕌 Oriente Médio</li>
-        </ul>
-
-        <h2>📦 Categorias Disponíveis</h2>
-        <ul>
-            <li>🌿 <strong>Ervas e Especiarias:</strong> Ervas, Especiarias, Misturas de temperos, Ingredientes especiais</li>
-            <li>🍽️ <strong>Pratos:</strong> Sobremesas, Massas, Carnes, Peixes e frutos do mar, Aves, Saladas, Vegetarianos & veganos, Sopas & caldos, Lanches & entradas</li>
-            <li>🔥 <strong>Pimentas:</strong> Pimentas em grãos, Pimentas em pó ou trituradas</li>
-            <li>🧂 <strong>Sais & Finalizadores</strong></li>
-            <li>🎁 <strong>Combos:</strong> Kits Essenciais</li>
-        </ul>
-
-        <div style="text-align: center;">
-            <a href="https://www.clubedotempero.com/produtos/" class="cta-button">
-                🛒 Ver Todos os Produtos
-            </a>
-        </div>
-
-        <div class="highlight-box">
-            <strong>💬 Converse no WhatsApp:</strong> A equipe do Clube do Tempero está acessível para 
-            ajudar com suas dúvidas sobre produtos e compras [web:12].
-        </div>
-
-        <h2>📍 Informações da Empresa</h2>
-        <p>
-            <strong>Website:</strong> www.clubedotempero.com [web:12]<br>
-            <strong>Instagram:</strong> @oclubedotempero [web:3]<br>
-            <strong>Facebook:</strong> Clube do Tempero [web:6]<br>
-            <strong>Endereço:</strong> Rua Josina Teixeira de Carvalho 966 [web:12]
-        </p>
-
-        <div class="footer">
-            <p>✨ Tempero de verdade! ✨</p>
-            <p>Artigo informativo sobre os produtos do Clube do Tempero</p>
-        </div>
-    </div>
 </body>
-                  </html>
+</html>
